@@ -5,6 +5,7 @@ site_dir: docs
 nav:
   - Home: index.md 
   - About: about.md
+  - HTML: HTML.md
 
 theme: 
   name: readthedocs
