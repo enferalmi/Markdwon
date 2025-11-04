@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>HTML - Web estàtica amb MKDOCS</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "HTML";
+        var mkdocs_page_input_path = "HTML.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Web estàtica amb MKDOCS
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">HTML</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-introduccion">1. Introducción</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#tipos-de-lenguajes">Tipos de lenguajes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ejemplo-de-documento-html">Ejemplo de documento HTML</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-versiones">2. Versiones</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_1"></a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#html-10">HTML 1.0</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#html-20">HTML 2.0</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#html-32">HTML 3.2</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#html-40">HTML 4.0</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#html-401">HTML 4.01</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#html-5">HTML 5</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#principales-cambios-introducidos">Principales cambios introducidos:</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-sintaxis">3. Sintaxis</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#31-etiquetas-y-atributos">3.1 Etiquetas y atributos</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#etiquetas">Etiquetas</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#atributos">Atributos</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#32-tipos-de-atributos">3.2 Tipos de atributos</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#atributos-basicos-o-globales">Atributos básicos o globales</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#atributos-para-internacionalizacion">Atributos para internacionalización</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#atributos-para-obtener-el-foco">Atributos para obtener el foco</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#atributos-de-eventos">Atributos de eventos</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#33-xhtml">3.3 XHTML</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#34-xhtml-vs-html">3.4 XHTML vs HTML</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#mime-type">MIME type</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Web estàtica amb MKDOCS</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">HTML</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ut-2-estructura-de-los-documentos-html-xhtml-xml">UT 2. Estructura de los documentos: HTML, XHTML, XML</h1>
+<hr />
+<h2 id="1-introduccion">1. Introducción</h2>
+<p><strong>HTML (HyperText Markup Language)</strong> es el lenguaje de marcas utilizado para crear la mayor parte de las páginas web.</p>
+<h3 id="tipos-de-lenguajes">Tipos de lenguajes</h3>
+<p>No se debe confundir <strong>lenguaje de marcas</strong> con <strong>lenguaje de programación</strong>.<br />
+Un <strong>lenguaje de marcas</strong> o <strong>lenguaje de marcado</strong> define un conjunto de reglas para codificar documentos en un formato que es legible tanto por personas como por máquinas, mientras que un <strong>lenguaje de programación</strong> proporciona comandos y sintaxis que permiten escribir programas entendidos por la computadora.</p>
+<p>HTML es un estándar reconocido en todos los navegadores; por lo tanto, todos ellos visualizan una página HTML de forma muy similar, independientemente del sistema operativo sobre el que se ejecuten.</p>
+<hr />
+<h3 id="ejemplo-de-documento-html">Ejemplo de documento HTML</h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;title&gt;Título del documento&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;LMSXI&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="2-versiones">2. Versiones</h2>
+<p>El origen de <strong>HTML</strong> fue un sistema de hipertexto para compartir documentos electrónicos en <strong>1990</strong>.<br />
+La primera propuesta oficial para convertir HTML en un estándar se realizó en <strong>1993</strong>.<br />
+Ninguna de las dos primeras propuestas de estándar que se hicieron (<strong>HTML</strong> y <strong>HTML+</strong>) consiguió convertirse en estándar oficial.</p>
+<p>A lo largo de los años se publicaron diferentes versiones del estándar.<br />
+A continuación se muestran las más importantes:</p>
+<h2 id="_1"><img alt="Logotip de HTML" src="../img/HTML5_logo_and_wordmark.png.png" /></h2>
+<h3 id="html-10">HTML 1.0</h3>
+<p>Fue la versión básica de HTML, con soporte para elementos sencillos como <strong>texto</strong> e <strong>imágenes</strong>.<br />
+Era una versión muy limitada, sin características avanzadas relacionadas con la forma en que se representa el contenido en el navegador.  </p>
+<p>No ofrecía soporte para elementos como <strong>tablas</strong> o <strong>fuentes tipográficas</strong>.<br />
+Además, el <strong>W3C</strong> todavía no existía antes de HTML 2.0, por lo tanto no hay detalles oficiales sobre esta primera versión.</p>
+<hr />
+<h3 id="html-20">HTML 2.0</h3>
+<p>Fue la <strong>primera versión oficial de HTML</strong>.<br />
+El estándar fue publicado por el <strong>IETF (Internet Engineering Task Force)</strong> en <strong>noviembre de 1995</strong>.</p>
+<hr />
+<h3 id="html-32">HTML 3.2</h3>
+<p>Publicada el <strong>14 de enero de 1997</strong> por el <strong>W3C</strong>.<br />
+Entre sus principales novedades incluía:</p>
+<ul>
+<li>Los <em>applets</em> de <strong>Java</strong>.  </li>
+<li>Posibilidad de mostrar <strong>texto alrededor de las imágenes</strong>.</li>
+</ul>
+<hr />
+<h3 id="html-40">HTML 4.0</h3>
+<p>Publicada el <strong>24 de abril de 1998</strong>.<br />
+Entre las novedades que presentaba se encontraban:</p>
+<ul>
+<li>Las <strong>hojas de estilo CSS</strong>, utilizadas hoy en día para aplicar estilos a las páginas web.  </li>
+<li>La posibilidad de incluir <strong>pequeños programas</strong> o <em>scripts</em> en las páginas web.</li>
+</ul>
+<hr />
+<h3 id="html-401">HTML 4.01</h3>
+<p>Publicada el <strong>24 de diciembre de 1999</strong>.<br />
+En ese momento el <strong>W3C</strong> detuvo la actividad de estandarización de HTML hasta <strong>marzo de 2007</strong>, momento en que se retoma gracias al impulso del grupo <strong>WHATWG (Web Hypertext Application Technology Working Group)</strong> y a la publicación de los borradores de <strong>HTML5</strong>.</p>
+<hr />
+<h3 id="html-5">HTML 5</h3>
+<p><strong>HTML5</strong> es la versión más avanzada y considerada el estándar actual.<br />
+Ha evolucionado a través de diferentes especificaciones (HTML 5.1, HTML 5.2 y HTML 5.3).<br />
+Su lanzamiento inicial fue el <strong>28 de octubre de 2014</strong>, pero se trata de una <strong>versión viva</strong>, en la que se sigue trabajando.<br />
+Las especificaciones más recientes se pueden encontrar en la web del <strong>WHATWG</strong>.</p>
+<h4 id="principales-cambios-introducidos">Principales cambios introducidos:</h4>
+<ul>
+<li>Introducción de <strong>nuevos elementos y atributos</strong> que reflejan los usos actuales de los sitios web modernos.  </li>
+<li>Inclusión de <strong>elementos semánticos</strong>, como <code>&lt;header&gt;</code> o <code>&lt;footer&gt;</code>, que permiten describir el significado del contenido.  </li>
+<li>Incorporación de nuevas <strong>funcionalidades (HTML5 APIs)</strong>, como almacenamiento sin conexión (<em>offline</em>), funcionalidad <em>drag &amp; drop</em>, uso de la <strong>geolocalización</strong>, etc.  </li>
+<li><strong>Separación entre contenido y presentación</strong>: los estilos se definen mediante <strong>CSS</strong>, y HTML se encarga de la estructura y la semántica.  </li>
+</ul>
+<p>!!! note "Obsolescencia"
+    Esto provoca que muchos elementos y atributos de versiones anteriores queden obsoletos, como <code>&lt;font&gt;</code>, <code>&lt;center&gt;</code> o el atributo <code>align</code>.</p>
+<h2 id="3-sintaxis">3. Sintaxis</h2>
+<p>Un documento HTML está formado por etiquetas y atributos.</p>
+<h3 id="31-etiquetas-y-atributos">3.1 Etiquetas y atributos</h3>
+<h4 id="etiquetas">Etiquetas</h4>
+<p>Las etiquetas permiten estructurar el contenido en un documento HTML.<br />
+Una etiqueta (tag) es el identificador de un elemento (element).</p>
+<p>Suponiendo el siguiente código HTML:</p>
+<pre><code class="language-html">&lt;div class=&quot;center&quot;&gt;Texto&lt;/div&gt;
+</code></pre>
+<p>El elemento sería <code>&lt;div class="center"&gt;Texto&lt;/div&gt;</code> y la etiqueta <code>&lt;div&gt;</code>.</p>
+<p>Al igual que en XML, las etiquetas pueden ser:</p>
+<ul>
+<li>De apertura: <code>&lt;etiqueta&gt;</code></li>
+<li>De cierre: <code>&lt;/etiqueta&gt;</code></li>
+</ul>
+<p>También existen elementos vacíos:</p>
+<pre><code class="language-html">&lt;input /&gt;
+</code></pre>
+<p>Una de las diferencias con XML es que la cantidad de etiquetas de HTML está limitada a aquellas que están definidas por el lenguaje.</p>
+<h4 id="atributos">Atributos</h4>
+<p>Aunque HTML define una gran cantidad de etiquetas, éstas no son suficientes para crear páginas complejas, ya que la definición completa de ciertos elementos, como las imágenes y los enlaces, requiere información adicional.</p>
+<p>Como no es posible crear una etiqueta por cada elemento diferente, se añade la información adicional a las etiquetas mediante los atributos.</p>
+<p>Para cada uno de los atributos hay definido un conjunto de valores que se le puede asignar.</p>
+<p>Si el valor de un atributo no es válido, el navegador lo ignora.</p>
+<p>Cada una de las etiquetas HTML define los atributos que puede utilizar, aunque algunos de ellos son comunes a muchas etiquetas.</p>
+<hr />
+<h3 id="32-tipos-de-atributos">3.2 Tipos de atributos</h3>
+<p>A continuación, se presenta una clasificación de los atributos comunes según su funcionalidad.</p>
+<h4 id="atributos-basicos-o-globales">Atributos básicos o globales</h4>
+<p>Se pueden usar en casi todas las etiquetas HTML.</p>
+<p><strong>name</strong><br />
+Permite asignar un nombre a un objeto HTML.</p>
+<pre><code class="language-html">&lt;input name=&quot;password&quot; /&gt;
+</code></pre>
+<p><strong>title</strong><br />
+Asigna un título a un elemento HTML, mejorando así la accesibilidad. Dicho título es mostrado por los navegadores cuando el usuario pasa el ratón por encima del elemento. Es especialmente útil con los elementos <code>a</code>, <code>link</code>, <code>img</code>, <code>object</code>, <code>abbr</code> y <code>acronym</code>.</p>
+<pre><code class="language-html">&lt;a title=&quot;Título de etiqueta&quot;&gt;&lt;/a&gt;
+</code></pre>
+<p><strong>id</strong><br />
+Permite identificar al elemento HTML sobre el que se aplica de forma única mediante un identificador único. Solo es útil cuando se trabaja con CSS y con JavaScript.</p>
+<pre><code class="language-html">&lt;div id=&quot;principal&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>Los identificadores:</p>
+<ul>
+<li>Pueden empezar por números.  </li>
+<li>Solo puede contener letras, números, guiones medios (-) y/o guiones bajos (_).</li>
+</ul>
+<p><strong>style</strong><br />
+Permite aplicar a un elemento HTML un estilo CSS directamente.</p>
+<pre><code class="language-html">&lt;span style=&quot;color: red;&quot;&gt;&lt;/span&gt;
+</code></pre>
+<p><strong>class</strong><br />
+Permite aplicar a un elemento HTML los estilos de una clase definida en una hoja de estilos CSS.</p>
+<pre><code class="language-html">&lt;div class=&quot;rojo&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.rojo {
+  color: red;
+}
+</code></pre>
+<p>Los nombres de las clases:</p>
+<ul>
+<li>Pueden empezar por números.  </li>
+<li>Solo puede contener letras, números, guiones medios (-) y/o guiones bajos (_).</li>
+</ul>
+<hr />
+<h4 id="atributos-para-internacionalizacion">Atributos para internacionalización</h4>
+<p>Estos atributos se utilizan en las páginas que muestran sus contenidos en varios idiomas, o aquellas que quieren indicar de forma explícita el idioma de sus contenidos.</p>
+<p><strong>dir</strong><br />
+Indica la dirección de escritura del texto. Solo puede tomar dos valores:</p>
+<ul>
+<li><code>ltr</code> (left to right): de izquierda a derecha. Es el valor por defecto.  </li>
+<li><code>rtl</code> (right to left): de derecha a izquierda.</li>
+</ul>
+<p><strong>lang</strong><br />
+Especifica el idioma del elemento mediante un código predefinido. Los posibles valores de este atributo se definen en el RFC 1766, el cual hace referencia a la norma ISO 639.</p>
+<pre><code class="language-html">&lt;html lang=&quot;es&quot;&gt;&lt;/html&gt;
+</code></pre>
+<p>Algunos ejemplos de valores posibles son:</p>
+<ul>
+<li>en → Inglés  </li>
+<li>es → Español  </li>
+<li>ja → Japonés  </li>
+<li>fr → Francés</li>
+</ul>
+<p><strong>xml:lang</strong><br />
+Al igual que el atributo <code>lang</code>, especifica el idioma del elemento mediante un código definido según el RFC 1766.</p>
+<pre><code class="language-html">&lt;html xml:lang=&quot;it&quot;&gt;&lt;/html&gt;
+</code></pre>
+<p>En las páginas XHTML, el atributo <code>xml:lang</code> tiene más prioridad que <code>lang</code> y es obligatorio incluirlo siempre que se incluya el atributo <code>lang</code>.</p>
+<hr />
+<h4 id="atributos-para-obtener-el-foco">Atributos para obtener el foco</h4>
+<p>Permite definir el foco en elementos como formularios.</p>
+<p><strong>autofocus</strong><br />
+Pone el foco de forma automática en el elemento que lo tenga definido.</p>
+<pre><code class="language-html">&lt;input autofocus /&gt;
+</code></pre>
+<hr />
+<h4 id="atributos-de-eventos">Atributos de eventos</h4>
+<p>Se entiende por evento aquello que ocurre cuando un usuario interactúa con la página web. Por ejemplo, hacer clic, hacer doble clic, pasar el ratón por encima de un elemento, etc.</p>
+<p>Estos atributos solo se utilizan en las páginas web dinámicas, para las cuales se utiliza el lenguaje de programación JavaScript.<br />
+Como no es objetivo de la materia, no se va a contemplar.</p>
+<hr />
+<h3 id="33-xhtml">3.3 XHTML</h3>
+<p><img alt="Logotip de XML" src="../img/XHTML_text_representation.png" /></p>
+<p>El lenguaje <strong>XHTML (eXtensible HyperText Markup Language)</strong> es muy similar al lenguaje HTML. De hecho, no es más que una adaptación de HTML al lenguaje XML.</p>
+<p>El estándar XHTML 1.0 solo añade pequeñas mejoras y modificaciones menores al estándar HTML 4.01, por lo que este último está prácticamente incluido en el primero. Pasar del HTML 4.01 Strict a XHTML no requiere casi ningún cambio.</p>
+<p>El lenguaje HTML tiene una sintaxis muy permisiva, por lo que es posible escribir sus etiquetas y atributos de muchas formas diferentes. Las etiquetas, por ejemplo, pueden escribirse en mayúsculas, minúsculas e incluso combinando mayúsculas y minúsculas. El valor de los atributos de las etiquetas se puede indicar con o sin comillas. Además, el orden en el que se abrían y cerraban las etiquetas no era importante.</p>
+<p>La flexibilidad de HTML da lugar a páginas con un código desordenado, difícil de mantener y muy poco profesional.</p>
+<p>XHTML soluciona estos problemas añadiendo ciertas normas en la forma de escribir las etiquetas y atributos. Las normas son las mismas que para un documento XML común bien formado. De esta forma, se consigue:</p>
+<ul>
+<li>Sencillez a la hora de editar y mantener el código.  </li>
+<li>Al ser más regular, es más fácil escribir código que lo procese.  </li>
+<li>Como es XML, se pueden utilizar fácilmente herramientas creadas para procesar documentos XML genéricos (editores, XSLT, etc.).</li>
+</ul>
+<hr />
+<h3 id="34-xhtml-vs-html">3.4 XHTML vs HTML</h3>
+<p>Existen unas diferencias entre HTML y XHTML a nivel sintáctico y estructural. En general, los diseñadores web suelen trabajar con HTML. El XHTML es más apreciado por los desarrolladores, que valoran la regularidad adicional. De cualquier manera, los tres primeros puntos de la anterior lista se consideran una buena práctica y se suelen cumplir siempre.</p>
+<p>Para que el código HTML se pueda considerar XML bien formado, y por tanto, XHTML, tiene que cumplir:</p>
+<ul>
+<li>Toda la página debe estar contenida en un elemento raíz <code>&lt;html&gt;</code>.  </li>
+<li>Los nombres de las etiquetas y atributos siempre se escriben en minúsculas.  </li>
+<li>El valor de los atributos, incluso los numéricos, siempre se encierra entre comillas.  </li>
+<li>En los atributos en los que el nombre coincide con su valor, no puede darse el valor por entendido, es decir, no se pueden comprimir. Este tipo de atributos no son muy habituales. Por ejemplo:</li>
+</ul>
+<pre><code class="language-html">&lt;div value=&quot;value&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>no es posible ponerlo como:</p>
+<pre><code class="language-html">&lt;div value&gt;&lt;/div&gt;
+</code></pre>
+<ul>
+<li>Todas las etiquetas deben cerrarse siempre. XHTML permite que, en lugar de abrir y cerrar de forma consecutiva la etiqueta (<code>&lt;br&gt;&lt;br/&gt;</code>), se pueda utilizar la sintaxis <code>&lt;br /&gt;</code> para indicar que es una etiqueta vacía que se abre y se cierra en ese mismo punto.</li>
+</ul>
+<p>Por otro lado, hay que tener en cuenta que los navegadores no procesan HTML y XHTML exactamente igual:</p>
+<ul>
+<li>Si un documento HTML contiene errores, el navegador intentará mostrar el mayor contenido posible.  </li>
+<li>Si un documento XHTML contiene algún error, el navegador no mostrará el documento.</li>
+</ul>
+<h4 id="mime-type">MIME type</h4>
+<p>Un navegador web sabe si el documento que se está sirviendo es un HTML o un XHTML por el MIME (Multipurpose Internet Mail Extensions). MIME es una cabecera del protocolo HTTP que indica al navegador qué tipo de documento se está enviando.</p>
+<p>El MIME para un documento HTML es el siguiente:</p>
+<pre><code>text/html
+</code></pre>
+<p>El MIME para un documento XHTML es alguno de los dos siguientes:</p>
+<pre><code>application/xhtml+xml
+application/xml
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../about/" class="btn btn-neutral float-left" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../about/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
