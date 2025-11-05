@@ -45,6 +45,5 @@ markdown_extensions:
 
 plugins:
   - search:
-  - page-to-pdf:
-      disableOnServe: true
+  - with-pdf:
     
