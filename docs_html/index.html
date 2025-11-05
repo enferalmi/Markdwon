@@ -1,0 +1,616 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Web estàtica amb MKDOCS</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto,+sans-serif:300,300i,400,400i,700,700i%7CCourier+New,+monospace:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto, sans-serif";--md-code-font:"Courier New, monospace"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccion-a-la-asignatura-lenguajes-de-marcas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Web estàtica amb MKDOCS" class="md-header__button md-logo" aria-label="Web estàtica amb MKDOCS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Web estàtica amb MKDOCS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introducción a la Asignatura: Lenguajes de Marcas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Canvia a mode oscur"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canvia a mode oscur" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Canvia a mode clar"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canvia a mode clar" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="HTML/" class="md-tabs__link">
+          
+  
+  
+  Tema 1
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Web estàtica amb MKDOCS" class="md-nav__button md-logo" aria-label="Web estàtica amb MKDOCS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Web estàtica amb MKDOCS
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tema 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Tema 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HTML/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducció
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-son-los-lenguajes-de-marcas" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué son los Lenguajes de Marcas?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué son los Lenguajes de Marcas?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características principales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-lenguajes-de-marcas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de Lenguajes de Marcas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-de-la-asignatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivos de la Asignatura
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objetivos de la Asignatura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conocimiento-fundamental-de-los-lenguajes-de-marcas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conocimiento fundamental de los Lenguajes de Marcas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capacitacion-en-el-uso-de-herramientas-modernas-de-creacion-de-documentos-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capacitación en el uso de herramientas modernas de creación de documentos web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-practica-en-proyectos-reales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicación práctica en proyectos reales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenido-del-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contenido del Curso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contenido del Curso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduccion-a-html-y-su-sintaxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción a HTML y su Sintaxis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-caracteristicas-de-xhtml-y-su-compatibilidad-con-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Características de XHTML y su Compatibilidad con HTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-uso-de-xml-para-almacenar-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Uso de XML para Almacenar Datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-creacion-de-contenido-en-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Creación de Contenido en CSS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-introduccion-a-python-para-el-backend-de-la-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Introducción a Python para el Backend de la Web
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduccion-a-la-asignatura-lenguajes-de-marcas">Introducción a la Asignatura: Lenguajes de Marcas</h1>
+<h2 id="que-son-los-lenguajes-de-marcas">¿Qué son los Lenguajes de Marcas?</h2>
+<p>Los <strong>lenguajes de marcas</strong> (en inglés, <em>markup languages</em>) son sistemas de codificación utilizados para estructurar, identificar y presentar información dentro de documentos digitales. Son esenciales para organizar el contenido en la web y permiten que la información sea legible tanto para las máquinas como para las personas.</p>
+<h3 id="caracteristicas-principales">Características principales</h3>
+<ul>
+<li><strong>Estructuración</strong>: Organizan el contenido en <strong>etiquetas</strong> y <strong>atributos</strong>.</li>
+<li><strong>Compatibilidad</strong>: Son <strong>legibles tanto por humanos como por máquinas</strong>.</li>
+<li><strong>Flexibilidad</strong>: Permiten la personalización de la presentación del contenido, lo que facilita el estilizado y manipulación de los documentos.</li>
+</ul>
+<hr />
+<h2 id="tipos-de-lenguajes-de-marcas">Tipos de Lenguajes de Marcas</h2>
+<ol>
+<li>
+<p><strong>HTML (HyperText Markup Language)</strong>: Es el lenguaje de marcas más utilizado para crear páginas web. Define la estructura de las páginas web mediante etiquetas como <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, entre otras.</p>
+</li>
+<li>
+<p><strong>XHTML (Extensible HyperText Markup Language)</strong>: Es una versión más estricta y formateada de HTML que sigue las reglas de XML. Puede utilizarse cuando se quiere garantizar que el código sea más limpio y estandarizado.</p>
+</li>
+<li>
+<p><strong>XML (eXtensible Markup Language)</strong>: A diferencia de HTML, <strong>XML no define etiquetas fijas</strong>. Permite a los usuarios crear etiquetas personalizadas para almacenar datos de manera estructurada y coherente.</p>
+</li>
+<li>
+<p><strong>CSS (Cascading Style Sheets)</strong>: Aunque no es un lenguaje de marcas, <strong>CSS</strong> es esencial para aplicar estilos visuales a las páginas HTML, mejorando la presentación del contenido estructurado.</p>
+</li>
+<li>
+<p><strong>Python</strong>: Aunque Python no es un lenguaje de marcas, su uso en la web como lenguaje de programación backend es clave para generar sitios web dinámicos e interactivos. Usamos Python para la manipulación de datos y la creación de servidores web.</p>
+</li>
+</ol>
+<hr />
+<h2 id="objetivos-de-la-asignatura">Objetivos de la Asignatura</h2>
+<h3 id="conocimiento-fundamental-de-los-lenguajes-de-marcas">Conocimiento fundamental de los Lenguajes de Marcas</h3>
+<p>El principal objetivo es proporcionar una base sólida en <strong>HTML</strong>, <strong>XHTML</strong>, <strong>XML</strong>, y <strong>CSS</strong>, permitiendo que el alumno comprenda cómo estructurar documentos web y cómo estos lenguajes influyen en el diseño y la presentación de una página web.</p>
+<h3 id="capacitacion-en-el-uso-de-herramientas-modernas-de-creacion-de-documentos-web">Capacitación en el uso de herramientas modernas de creación de documentos web</h3>
+<p>Se trabajarán herramientas modernas como <strong>Markdown</strong>, <strong>CSS</strong> para estilizar páginas web y <strong>Python</strong> para crear aplicaciones interactivas que utilicen lenguajes de marcas.</p>
+<h3 id="aplicacion-practica-en-proyectos-reales">Aplicación práctica en proyectos reales</h3>
+<p>Además de las explicaciones teóricas, los alumnos desarrollarán proyectos prácticos donde podrán aplicar los conocimientos adquiridos para crear páginas web estáticas y dinámicas utilizando los lenguajes de marcas y otras tecnologías web.</p>
+<hr />
+<h2 id="contenido-del-curso">Contenido del Curso</h2>
+<h3 id="1-introduccion-a-html-y-su-sintaxis">1. Introducción a HTML y su Sintaxis</h3>
+<p>Se analizará la sintaxis de <strong>HTML</strong>, su estructura básica, etiquetas y atributos.</p>
+<h3 id="2-caracteristicas-de-xhtml-y-su-compatibilidad-con-html">2. Características de <strong>XHTML</strong> y su Compatibilidad con <strong>HTML</strong></h3>
+<p>Se hará una comparativa entre <strong>HTML</strong> y <strong>XHTML</strong>, destacando las diferencias más importantes.</p>
+<h3 id="3-uso-de-xml-para-almacenar-datos">3. Uso de <strong>XML</strong> para Almacenar Datos</h3>
+<p>Se introducirá el uso de <strong>XML</strong> para crear archivos estructurados y su uso en aplicaciones de gestión de datos.</p>
+<h3 id="4-creacion-de-contenido-en-css">4. Creación de Contenido en <strong>CSS</strong></h3>
+<p>Se mostrará cómo utilizar <strong>CSS</strong> para crear el diseño y el estilo de una página web.</p>
+<h3 id="5-introduccion-a-python-para-el-backend-de-la-web">5. Introducción a <strong>Python</strong> para el Backend de la Web</h3>
+<p>Se explorará el uso de <strong>Python</strong> en el backend, especialmente en el desarrollo de aplicaciones web con frameworks como Flask o Django.</p>
+<hr />
+<h2 id="conclusion">Conclusión</h2>
+<p>Los <strong>lenguajes de marcas</strong> son esenciales para el uso efectivo de la web, ya que permiten estructurar y presentar el contenido de manera clara y accesible. Esta asignatura proporcionará las habilidades necesarias para comenzar a trabajar con estos lenguajes y aplicarlos en proyectos web reales.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "navigation.tabs", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -44,7 +44,13 @@ markdown_extensions:
 
 
 plugins:
-  - search:
-  - pdf-export:
-      combined: true
+  - search
+  - with-pdf:
+      output_path: pdf/Tema1_Complet.pdf
+      cover_title: "Tema 1: Introducció a HTML"
+      cover_subtitle: "Web estàtica amb MkDocs"
+      author: "Enric"
+      toc_level: 2
+      ordered_chapter_level: 2
+      
     
