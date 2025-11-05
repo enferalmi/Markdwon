@@ -3,10 +3,46 @@ docs_dir: md
 site_dir: docs
 
 nav:
-  - Home: index.md 
-  - About: about.md
-  - HTML: HTML.md
+  - Tema 1:
+      - Introducció: HTML.md
+  
 
-theme: 
-  name: readthedocs
+
+
+theme:
+  name: material
+  palette:
+      - scheme: default
+        toggle:
+          icon: material/brightness-7 
+          name: Canvia a mode oscur
+
+      - scheme: slate
+        toggle:
+          icon: material/brightness-4
+          name: Canvia a mode clar
+  font:
+    text: Roboto, sans-serif
+    code: Courier New, monospace
+  features:
+    - navigation.sections
+    - navigation.tabs
+    - content.code.copy
+   
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      linenums: true        
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
  
+
+
+plugins:
+  - search:
+    

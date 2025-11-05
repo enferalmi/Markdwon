@@ -1,6 +1,11 @@
 # UT 2. Estructura de los documentos: HTML, XHTML, XML
 
 ---
+!!! info "Recordatorio"
+    Esta unidad trata sobre **los lenguajes de marcas** utilizados para estructurar documentos web: **HTML, XHTML y XML**.  
+    Entender sus diferencias es esencial para desarrollar aplicaciones web correctamente.
+
+
 
 ## 1. Introducción
 
@@ -11,24 +16,49 @@
 No se debe confundir **lenguaje de marcas** con **lenguaje de programación**.  
 Un **lenguaje de marcas** o **lenguaje de marcado** define un conjunto de reglas para codificar documentos en un formato que es legible tanto por personas como por máquinas, mientras que un **lenguaje de programación** proporciona comandos y sintaxis que permiten escribir programas entendidos por la computadora.
 
+
 HTML es un estándar reconocido en todos los navegadores; por lo tanto, todos ellos visualizan una página HTML de forma muy similar, independientemente del sistema operativo sobre el que se ejecuten.
+
+!!! info "Diferencia entre HTML y XML"
+    Aunque ambos son **lenguajes de marcas**, HTML está diseñado para **mostrar información** en navegadores web,  
+    mientras que **XML** se utiliza principalmente para **almacenar e intercambiar datos** de forma estructurada.
+
 
 ---
 
 ### Ejemplo de documento HTML
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Título del documento</title>
-  </head>
-  <body>
-    <p>LMSXI</p>
-  </body>
-</html>
-```
+
+!!! example "Ejemplo de documento HTML con numeración y botón de copia"
+    ```html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8" />
+        <title>Título del documento</title>
+      </head>
+      <body>
+        <p>LMSXI</p>
+      </body>
+    </html>
+    ```
+
+!!! example "Estructura general d'un document HTML"
+    ```mermaid
+    graph TD;
+      A["Inici"] --> B[DOCTYPE html]
+      B --> C[html]
+      C --> D["head"]
+      D --> E[Títol del document]
+      C --> F["body"]
+      F --> G["header"]
+      F --> H["<h1> Encabezado </h1>"]
+      F --> I["<p> Contingut de la pàgina </p>"]
+      F --> J["<footer> Peu de pàgina </footer>"]
+     
+
+    ```
+
 
 ## 2. Versiones
 
@@ -148,6 +178,13 @@ Si el valor de un atributo no es válido, el navegador lo ignora.
 
 Cada una de las etiquetas HTML define los atributos que puede utilizar, aunque algunos de ellos son comunes a muchas etiquetas.
 
+??? tip "Ejemplo práctico de etiqueta y atributo"
+    ```html
+    <img src="logo.png" alt="Logotipo del sitio" />
+    ```
+    En este ejemplo:
+    - `<img>` es la **etiqueta**.
+    - `src` y `alt` son **atributos** que proporcionan información adicional al navegador.
 ---
 
 ### 3.2 Tipos de atributos
@@ -316,6 +353,11 @@ Por otro lado, hay que tener en cuenta que los navegadores no procesan HTML y XH
 
 - Si un documento HTML contiene errores, el navegador intentará mostrar el mayor contenido posible.  
 - Si un documento XHTML contiene algún error, el navegador no mostrará el documento.
+
+!!! warning "Error común"
+    No olvides **cerrar correctamente las etiquetas** en HTML y **seguir la sintaxis XML** en XHTML.  
+    Los navegadores son tolerantes con HTML, pero en XHTML **un solo error impide que se muestre la página**.
+
 
 #### MIME type
 
